@@ -1,5 +1,14 @@
 export const initialState = {
-  basket: [],
+  basket: [
+    {
+      id: "123432",
+      title: "OnePlus 8 Pro (Glacial Green 8GB RAM+128GB Storage)",
+      price: 55.43,
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/61fv4VZRQ7L._SL1500_.jpg",
+      rating: 3,
+    },
+  ],
 };
 
 function reducer(state, action) {
@@ -13,7 +22,20 @@ function reducer(state, action) {
       };
     case "REMOVE_FROM_BASKET":
       // logic for remove from basket
-      return { state };
+
+      const newBasket = [...state.basket];
+
+      const index = newBasket.findIndex((b) => b.id === action.id);
+      if (index >= 0) {
+        // item exxit in the basket
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(
+          `Cant remove item (id: ${action.id}) as it it not present`
+        );
+      }
+
+      return { ...state, basket: newBasket };
     default:
       return state;
   }
