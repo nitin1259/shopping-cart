@@ -9,6 +9,7 @@ export const initialState = {
       rating: 3,
     },
   ],
+  user: null,
 };
 
 function reducer(state, action) {
@@ -36,6 +37,11 @@ function reducer(state, action) {
       }
 
       return { ...state, basket: newBasket };
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     default:
       return state;
   }
