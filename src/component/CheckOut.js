@@ -14,7 +14,7 @@ function CheckOut() {
           src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/CEPC/Wearables/Mi/Redmi_Band/SaleOn/MI-Xiaomi_redmi_Smart_Band_shop-now_1500x300.jpg"
           alt="offer image"
         />
-        <h3>Hi, {user?.email}</h3>
+        <h3 style={{ paddingLeft: "10px" }}>Hi, {user?.email}</h3>
         {basket?.length === 0 ? (
           <div>
             <h2>Your Shopping Basket is empty </h2>
