@@ -13,7 +13,7 @@ const cors = require("cors");
 const { response } = require("express");
 
 const stripe = require("stripe")(
-  "sk_test_51HTQNzCEhJSuqU5pv8gFHjr2pjjwe0Fx2m9dB7JW7nZz7qMEtxrUO4EBJw3yz4I6w4hjo3e8Dyca8Ax3Ha7Ejbkg00B9VEncIr"
+  "xyz"
 );
 
 // - App config
