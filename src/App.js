@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
-      console.log("user is >>", authUser);
+      // console.log("user is >>", authUser);
 
       if (authUser) {
         // the user just log in or already logged in user.

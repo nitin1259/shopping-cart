@@ -13,7 +13,7 @@ export const initialState = {
 };
 
 function reducer(state, action) {
-  console.log("show me the action: ", action);
+  // console.log("show me the action: ", action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       // logic for adding to basket
@@ -41,6 +41,11 @@ function reducer(state, action) {
       return {
         ...state,
         user: action.user,
+      };
+    case "EMPTY_BASKET":
+      return {
+        ...state,
+        basket: [],
       };
     default:
       return state;

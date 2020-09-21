@@ -39,6 +39,8 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
+  // console.log("The secret is >>>", clientSecret);
+
   // https://www.youtube.com/watch?v=sB2b3ZYMQgg
 
   const handleSubmit = async (event) => {
@@ -57,6 +59,10 @@ function Payment() {
         setSucceeded(true);
         setCardError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
 
         history.replace("/orders");
       });
