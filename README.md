@@ -4,3 +4,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 I
 for payment method used - https://www.youtube.com/watch?v=sB2b3ZYMQgg
+
+### Introducing the firebase cloud database for the orders.
